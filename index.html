@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kapsalon Zeno — Premium Kapsalon Brunssum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="content-loader.js"></script>
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-logo"><span>✦</span> Kapsalon Zeno</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo" data-ed="site-logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Kapsalon Zeno</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Diensten</a></li>
+        <li><a href="about.html">Over Ons</a></li>
+        <li><a href="#gallery">Galerij</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#hours" class="nav-cta">Afspraak Maken</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#services">Diensten</a>
+      <a href="about.html">Over Ons</a>
+      <a href="#gallery">Galerij</a>
+      <a href="#contact">Contact</a>
+      <a href="#hours" class="mobile-cta">Afspraak Maken</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal" data-ed="hero-badge">Brunssum · Walk-ins Welcome</div>
+      <h1 class="hero-title reveal">
+        <span class="line1" data-ed="hero-line1">Welkom Bij</span>
+        <span class="line2"><span data-ed="hero-line2">Kapsalon </span><em data-ed="hero-line2-em">Zeno.</em></span>
+      </h1>
+      <p class="hero-sub reveal" data-ed="hero-sub">Jouw premium kapsalon in Brunssum. Altijd welkom, zonder afspraak.</p>
+      <div class="hero-actions reveal">
+        <a href="#hours" class="btn btn-gold">Maak Afspraak</a>
+        <a href="#services" class="btn btn-outline">Onze Diensten</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><span class="stat-num">9</span><span class="stat-label">Diensten</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">5★</span><span class="stat-label">Reviews</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">6/7</span><span class="stat-label">Dagen Open</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>Knippen & Stylen</span><span class="sep">✦</span>
+      <span>Baard Trimmen</span><span class="sep">✦</span>
+      <span>Fade</span><span class="sep">✦</span>
+      <span>Kinderen Knippen</span><span class="sep">✦</span>
+      <span>Gezichtsbehandeling</span><span class="sep">✦</span>
+      <span>Wenkbauwen Epileren</span><span class="sep">✦</span>
+      <span>Zonder Afspraak</span><span class="sep">✦</span>
+      <span>Knippen & Stylen</span><span class="sep">✦</span>
+      <span>Baard Trimmen</span><span class="sep">✦</span>
+      <span>Fade</span><span class="sep">✦</span>
+      <span>Kinderen Knippen</span><span class="sep">✦</span>
+      <span>Gezichtsbehandeling</span><span class="sep">✦</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Wat Wij Bieden</span>
+        <h2 class="section-title">Onze <em>Diensten</em></h2>
+        <p class="section-sub">Vakkundig verzorgd voor de moderne man die het beste verdient.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 8C32 8 20 20 20 32C20 44 32 56 32 56C32 56 44 44 44 32C44 20 32 8 32 8Z" stroke="currentColor" stroke-width="2"/>
+              <circle cx="32" cy="32" r="4" fill="currentColor"/>
+              <path d="M16 32H48" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="service-num">01</div>
+          <h3 data-ed="svc-0-name">Knippen & Stylen</h3>
+          <p data-ed="svc-0-desc">Precisie knippen op maat — afgestemd op jouw gezichtsvorm en stijl.</p>
+          <div class="service-price" data-ed="svc-0-price">€17</div>
+          <a href="#hours" class="service-link">Boek Nu →</a>
+        </div>
+
+        <div class="service-card reveal featured">
+          <div class="featured-label">Meest Populair</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="12" y="28" width="40" height="8" rx="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 28V20C20 16 24 12 28 12H36C40 12 44 16 44 20V28" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 36V44C20 48 24 52 28 52H36C40 52 44 48 44 44V36" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="service-num">02</div>
+          <h3 data-ed="svc-1-name">Knippen met Baard & Stylen</h3>
+          <p data-ed="svc-1-desc">Het complete pakket — premium knipbeurt én perfect gesculpteerde baard in één.</p>
+          <div class="service-price" data-ed="svc-1-price">€25</div>
+          <a href="#hours" class="service-link">Boek Nu →</a>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 12C24 12 16 20 16 32C16 40 20 46 26 50" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M40 12C40 12 48 20 48 32C48 40 44 46 38 50" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M24 50C24 50 28 54 32 54C36 54 40 50 40 50" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="32" cy="28" r="6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="service-num">03</div>
+          <h3 data-ed="svc-2-name">Kinderen Knippen</h3>
+          <p data-ed="svc-2-desc">Speciaal voor kinderen t/m 12 jaar. Vakkundig, snel en in een fijne sfeer.</p>
+          <div class="service-price" data-ed="svc-2-price">€15</div>
+          <a href="#hours" class="service-link">Boek Nu →</a>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 52L32 12L44 52" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M23 40H41" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="service-num">04</div>
+          <h3 data-ed="svc-3-name">Fade</h3>
+          <p data-ed="svc-3-desc">Strakke fade en scherpe lijnen voor een verzorgde, cleane afwerking.</p>
+          <div class="service-price" data-ed="svc-3-price">€10</div>
+          <a href="#hours" class="service-link">Boek Nu →</a>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 42C18 42 22 30 32 30C42 30 46 42 46 42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M26 30C26 26 29 22 32 22C35 22 38 26 38 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <line x1="32" y1="14" x2="32" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <line x1="18" y1="42" x2="46" y2="42" stroke="currentColor" stroke-width="2"/>
+              <line x1="18" y1="46" x2="46" y2="46" stroke="currentColor" stroke-width="2"/>
+              <line x1="22" y1="50" x2="42" y2="50" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="service-num">05</div>
+          <h3 data-ed="svc-4-name">Baard Trimmen & Stylen</h3>
+          <p data-ed="svc-4-desc">Jouw baard in model — precies getrimd en gestyled voor een stoere look.</p>
+          <div class="service-price" data-ed="svc-4-price">€10</div>
+          <a href="#hours" class="service-link">Boek Nu →</a>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="24" r="12" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 24C20 24 16 52 32 52C48 52 44 24 44 24" stroke="currentColor" stroke-width="2"/>
+              <line x1="20" y1="36" x2="44" y2="36" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="service-num">06</div>
+          <h3 data-ed="svc-5-name">Gezichtsbehandeling</h3>
+          <p data-ed="svc-5-desc">Verfrissende gezichtsbehandeling voor een stralende, verzorgde huid.</p>
+          <div class="service-price" data-ed="svc-5-price">€10</div>
+          <a href="#hours" class="service-link">Boek Nu →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Ons Werk</span>
+        <h2 class="section-title">De <em>Galerij</em></h2>
+        <p class="section-sub">Elke knipbeurt spreekt voor zichzelf.</p>
+      </div>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item gi-1" data-ed="gallery-0" style="background-image: url('galerij/skinfade.png');" onclick="openLightbox(0)">
+        <div class="gallery-overlay"><span>Skin Fade</span></div>
+      </div>
+      <div class="gallery-item gi-2" data-ed="gallery-1" style="background-image: url('galerij/baard.png');" onclick="openLightbox(1)">
+        <div class="gallery-overlay"><span>Baard</span></div>
+      </div>
+      <div class="gallery-item gi-3" data-ed="gallery-2" style="background-image: url('galerij/taper.png');" onclick="openLightbox(2)">
+        <div class="gallery-overlay"><span>Classic Taper</span></div>
+      </div>
+      <div class="gallery-item gi-4" data-ed="gallery-3" style="background-image: url('galerij/fade.png');" onclick="openLightbox(3)">
+        <div class="gallery-overlay"><span>Fade</span></div>
+      </div>
+      <div class="gallery-item gi-5" data-ed="gallery-4" style="background-image: url('galerij/kinderen.png');" onclick="openLightbox(4)">
+        <div class="gallery-overlay"><span>Kinderen Knippen</span></div>
+      </div>
+      <div class="gallery-item gi-6" data-ed="gallery-5" style="background-image: url('galerij/stylen.png');" onclick="openLightbox(5)">
+        <div class="gallery-overlay"><span>Knippen & Stylen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPENINGSTIJDEN -->
+  <section id="hours">
+    <div class="hours-inner">
+      <div class="hours-content reveal">
+        <span class="section-tag">Wanneer Ben Je Welkom</span>
+        <h2 class="section-title">Openings<em>tijden</em></h2>
+        <p>Wij werken zonder afspraak — loop gewoon binnen tijdens onze openingstijden.</p>
+        <a href="https://wa.me/31640667558" target="_blank" class="btn-whatsapp" style="margin-top:32px; display:inline-flex;">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Vragen? WhatsApp ons
+        </a>
+      </div>
+      <div class="hours-table reveal">
+        <div class="hours-row closed">
+          <span class="hours-day">Maandag</span>
+          <span class="hours-time" data-ed="hours-ma">Gesloten</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Dinsdag</span>
+          <span class="hours-time" data-ed="hours-di">09:00 – 18:30</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Woensdag</span>
+          <span class="hours-time" data-ed="hours-wo">09:00 – 18:30</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Donderdag</span>
+          <span class="hours-time" data-ed="hours-do">09:00 – 18:30</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Vrijdag</span>
+          <span class="hours-time" data-ed="hours-vr">09:00 – 18:30</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Zaterdag</span>
+          <span class="hours-time" data-ed="hours-za">09:00 – 18:30</span>
+        </div>
+        <div class="hours-row sunday">
+          <span class="hours-day">Zondag</span>
+          <span class="hours-time" data-ed="hours-zo">11:00 – 17:00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Reviews</span>
+        <h2 class="section-title">Wat Klanten <em>Zeggen</em></h2>
+      </div>
+      <div class="testimonials-track reveal">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p data-ed="review-0-text">"Beste kapsalon in de regio, zonder twijfel. Zeno knipt mijn haar al jaren en ik ga nergens anders naartoe."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="--hue:200">R</div>
+            <div><strong data-ed="review-0-name">Rayan M.</strong><span data-ed="review-0-role">Vaste klant</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p data-ed="review-1-text">"De fades zijn absoluut prachtig. De sfeer, de muziek, alles klopt. Ik kom hier elke keer weer terug!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="--hue:340">A</div>
+            <div><strong data-ed="review-1-name">Adam K.</strong><span data-ed="review-1-role">Vaste klant</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p data-ed="review-2-text">"Gewoon binnenlopen en je wordt meteen geholpen. Knippen was top en de prijs is meer dan eerlijk. Aanrader!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="--hue:120">K</div>
+            <div><strong data-ed="review-2-name">Kevin V.</strong><span data-ed="review-2-role">Vaste klant</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p data-ed="review-3-text">"Liep binnen zonder afspraak, liep eruit als een nieuwe man. Het team is ongelooflijk getalenteerd. Top zaak!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="--hue:280">T</div>
+            <div><strong data-ed="review-3-name">Tom B.</strong><span data-ed="review-3-role">Vaste klant</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <span class="section-tag">Kom Langs</span>
+          <h2 class="section-title">Bezoek <em>Ons</em></h2>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="ci-icon">📍</div>
+              <div>
+                <strong>Adres</strong>
+                <p>Schiffelerstraat 9<br>6441 CN Brunssum</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">✂️</div>
+              <div>
+                <strong>Zonder Afspraak</strong>
+                <p>Wij werken zonder afspraak.<br>Loop gewoon binnen!</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">📸</div>
+              <div>
+                <strong>Volg Ons</strong>
+                <p><a href="https://www.instagram.com/kapsalonzeno" target="_blank">@kapsalonzeno</a> op Instagram & Facebook</p>
+              </div>
+            </div>
+          </div>
+          <div class="whatsapp-cta reveal">
+            <p class="wa-question">Vragen?</p>
+            <a href="https://wa.me/31640667558" target="_blank" class="btn-whatsapp">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp: 0640667558
+            </a>
+          </div>
+        </div>
+        <div class="contact-map reveal">
+          <div class="map-placeholder">
+            <div class="map-pin">📍</div>
+            <p>Schiffelerstraat 9<br>6441 CN Brunssum</p>
+            <a href="https://maps.google.com/?q=Schiffelerstraat+9+6441+CN+Brunssum" target="_blank" class="btn btn-outline">Routebeschrijving</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo" data-ed="site-logo">
+          <span class="logo-icon">✦</span>
+          <span class="logo-text">Kapsalon Zeno</span>
+        </a>
+        <p>Elke knipbeurt een meesterwerk.<br>Schiffelerstraat 9 · Brunssum</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/kapsalonzeno" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/kapsalonzeno" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/31640667558" target="_blank" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Diensten</h4>
+        <ul>
+          <li><a href="#services">Knippen & Stylen</a></li>
+          <li><a href="#services">Knippen met Baard</a></li>
+          <li><a href="#services">Kinderen Knippen</a></li>
+          <li><a href="#services">Fade</a></li>
+          <li><a href="#services">Gezichtsbehandeling</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Snelle Links</h4>
+        <ul>
+          <li><a href="#about">Ons Verhaal</a></li>
+          <li><a href="#barbers">Ons Team</a></li>
+          <li><a href="#gallery">Galerij</a></li>
+          <li><a href="#hours">Afspraak Maken</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Blijf Op De Hoogte</h4>
+        <p>Ontvang tips en exclusieve aanbiedingen direct in je inbox.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="jouw@email.com" required />
+          <button type="submit">→</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Kapsalon Zeno. Alle rechten voorbehouden.</p>
+      <p>Gemaakt met ✦ voor mannen die stijl waarderen.</p>
+      <a href="admin.html" class="footer-admin-login" title="Eigenaar login">🔒 Beheer</a>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <button id="lightbox-close" aria-label="Sluiten">✕</button>
+    <button id="lightbox-prev" aria-label="Vorige">‹</button>
+    <img id="lightbox-img" src="" alt="" />
+    <button id="lightbox-next" aria-label="Volgende">›</button>
+    <div id="lightbox-caption"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

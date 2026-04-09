@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beheer — Kapsalon Zeno</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- ── LOGIN SCREEN ─────────────────────────────── -->
+  <div id="login-screen">
+    <div class="login-card">
+      <div class="login-logo">✦ Kapsalon Zeno</div>
+      <h1>Eigenaar Login</h1>
+      <p class="login-sub">Voer het wachtwoord in om de website te beheren.</p>
+      <form id="login-form">
+        <div class="field">
+          <label>Wachtwoord</label>
+          <input type="password" id="password-input" placeholder="••••••••" autocomplete="current-password" />
+        </div>
+        <div id="login-error" class="error-msg" style="display:none">Onjuist wachtwoord. Probeer opnieuw.</div>
+        <button type="submit" class="btn-primary">Inloggen →</button>
+      </form>
+      <a href="index.html" class="back-link">← Terug naar website</a>
+    </div>
+  </div>
+
+  <!-- ── ADMIN DASHBOARD ──────────────────────────── -->
+  <div id="dashboard" style="display:none">
+
+    <!-- Topbar -->
+    <header class="admin-topbar">
+      <div class="topbar-brand">✦ Kapsalon Zeno <span>Beheer</span></div>
+      <div class="topbar-actions">
+        <a href="index.html" target="_blank" class="btn-ghost">Website bekijken ↗</a>
+        <button id="logout-btn" class="btn-ghost">Uitloggen</button>
+      </div>
+    </header>
+
+    <div class="admin-layout">
+
+      <!-- Sidebar -->
+      <nav class="admin-sidebar">
+        <button class="tab-btn active" data-tab="home">🏠 Homepage</button>
+        <button class="tab-btn" data-tab="diensten">✂️ Diensten & Prijzen</button>
+        <button class="tab-btn" data-tab="hours">🕐 Openingstijden</button>
+        <button class="tab-btn" data-tab="gallery">🖼️ Galerij</button>
+        <button class="tab-btn" data-tab="reviews">⭐ Reviews</button>
+        <button class="tab-btn" data-tab="about">📖 Over Ons</button>
+        <button class="tab-btn" data-tab="password">🔑 Wachtwoord</button>
+      </nav>
+
+      <!-- Main -->
+      <main class="admin-main">
+
+        <!-- ── TAB: HOME ──────────────────────────── -->
+        <section class="tab-panel active" id="tab-home">
+          <div class="panel-header">
+            <h2>Homepage tekst</h2>
+            <p>Pas de tekst op de hoofdpagina aan.</p>
+          </div>
+          <div class="fields">
+            <div class="divider">Logo</div>
+            <div class="field">
+              <label>Logo afbeelding <span class="hint">(vervangt het tekst-logo)</span></label>
+              <div class="logo-upload-wrap">
+                <div class="logo-preview" id="logo-preview">
+                  <span class="preview-placeholder">✦</span>
+                </div>
+                <div class="logo-upload-actions">
+                  <button type="button" class="upload-btn" onclick="document.getElementById('logo-upload').click()">📁 Logo uploaden</button>
+                  <button type="button" class="upload-btn" id="logo-remove-btn" style="display:none" onclick="removeLogo()">✕ Verwijderen</button>
+                  <input type="file" id="logo-upload" accept="image/*" style="display:none" onchange="handleLogoUpload(this)" />
+                  <p class="hint" style="margin-top:6px;font-size:0.7rem;color:#555">Max 2MB · PNG of SVG aanbevolen</p>
+                </div>
+              </div>
+            </div>
+            <div class="divider">Hero tekst</div>
+            <div class="field">
+              <label>Badge tekst <span class="hint">(boven de titel)</span></label>
+              <input type="text" data-key="heroBadge" placeholder="Brunssum · Walk-ins Welcome" />
+            </div>
+            <div class="field">
+              <label>Titel regel 1</label>
+              <input type="text" data-key="heroLine1" placeholder="Welkom Bij" />
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label>Titel regel 2 <span class="hint">(normaal)</span></label>
+                <input type="text" data-key="heroLine2" placeholder="Kapsalon" />
+              </div>
+              <div class="field">
+                <label>Titel regel 2 <span class="hint">(goud/cursief)</span></label>
+                <input type="text" data-key="heroLine2Em" placeholder="Zeno." />
+              </div>
+            </div>
+            <div class="field">
+              <label>Ondertitel</label>
+              <textarea data-key="heroSub" rows="2" placeholder="Jouw premium kapsalon in Brunssum..."></textarea>
+            </div>
+          </div>
+          <button class="btn-save" data-panel="home">Opslaan ✓</button>
+        </section>
+
+        <!-- ── TAB: DIENSTEN ─────────────────────── -->
+        <section class="tab-panel" id="tab-diensten">
+          <div class="panel-header">
+            <h2>Diensten &amp; Prijzen</h2>
+            <p>Pas de naam, omschrijving en prijs van elke dienst aan.</p>
+          </div>
+          <div id="services-list"></div>
+          <button class="btn-save" data-panel="diensten">Opslaan ✓</button>
+        </section>
+
+        <!-- ── TAB: HOURS ─────────────────────────── -->
+        <section class="tab-panel" id="tab-hours">
+          <div class="panel-header">
+            <h2>Openingstijden</h2>
+            <p>Pas de openingstijden per dag aan. Typ "Gesloten" als de zaak dicht is.</p>
+          </div>
+          <div class="fields">
+            <div class="field-row">
+              <div class="field"><label>Maandag</label><input type="text" data-key="hours.ma" placeholder="Gesloten" /></div>
+              <div class="field"><label>Dinsdag</label><input type="text" data-key="hours.di" placeholder="09:00 – 18:30" /></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label>Woensdag</label><input type="text" data-key="hours.wo" placeholder="09:00 – 18:30" /></div>
+              <div class="field"><label>Donderdag</label><input type="text" data-key="hours.do" placeholder="09:00 – 18:30" /></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label>Vrijdag</label><input type="text" data-key="hours.vr" placeholder="09:00 – 18:30" /></div>
+              <div class="field"><label>Zaterdag</label><input type="text" data-key="hours.za" placeholder="09:00 – 18:30" /></div>
+            </div>
+            <div class="field" style="max-width:280px">
+              <label>Zondag</label>
+              <input type="text" data-key="hours.zo" placeholder="11:00 – 17:00" />
+            </div>
+          </div>
+          <button class="btn-save" data-panel="hours">Opslaan ✓</button>
+        </section>
+
+        <!-- ── TAB: GALLERY ──────────────────────── -->
+        <section class="tab-panel" id="tab-gallery">
+          <div class="panel-header">
+            <h2>Galerij Foto's</h2>
+            <p>Upload een nieuwe foto of verander het bijschrift van elke galeriifoto.</p>
+          </div>
+          <div id="gallery-list"></div>
+          <button class="btn-save" data-panel="gallery">Opslaan ✓</button>
+        </section>
+
+        <!-- ── TAB: REVIEWS ─────────────────────── -->
+        <section class="tab-panel" id="tab-reviews">
+          <div class="panel-header">
+            <h2>Reviews</h2>
+            <p>Pas de klantenreviews aan die op de homepage worden getoond.</p>
+          </div>
+          <div id="reviews-list"></div>
+          <button class="btn-save" data-panel="reviews">Opslaan ✓</button>
+        </section>
+
+        <!-- ── TAB: ABOUT ─────────────────────────── -->
+        <section class="tab-panel" id="tab-about">
+          <div class="panel-header">
+            <h2>Over Ons pagina</h2>
+            <p>Bewerk de teksten en foto’s op de Over Ons pagina.</p>
+          </div>
+          <div class="fields">
+            <div class="divider">Foto’s</div>
+            <div class="field-row">
+              <div class="field">
+                <label>Zaak foto <span class="hint">(Over Ons sectie)</span></label>
+                <div class="gallery-preview" id="about-photo-preview" style="height:160px">
+                  <span class="preview-placeholder">🏠</span>
+                  <button type="button" class="upload-btn" onclick="document.getElementById('about-photo-upload').click()">📁 Foto uploaden</button>
+                  <input type="file" id="about-photo-upload" accept="image/*" style="display:none" onchange="handleAboutPhotoUpload(this, 'about')" />
+                </div>
+              </div>
+              <div class="field">
+                <label>Kapper foto <span class="hint">(Zeno profiel)</span></label>
+                <div class="gallery-preview" id="barber-photo-preview" style="height:160px">
+                  <span class="preview-placeholder">👤</span>
+                  <button type="button" class="upload-btn" onclick="document.getElementById('barber-photo-upload').click()">📁 Foto uploaden</button>
+                  <input type="file" id="barber-photo-upload" accept="image/*" style="display:none" onchange="handleAboutPhotoUpload(this, 'barber')" />
+                </div>
+              </div>
+            </div>
+            <div class="divider">Teksten</div>
+            <div class="field">
+              <label>Eerste alinea</label>
+              <textarea data-key="aboutP1" rows="3" placeholder="Kapsalon Zeno staat voor kwaliteit..."></textarea>
+            </div>
+            <div class="field">
+              <label>Tweede alinea</label>
+              <textarea data-key="aboutP2" rows="3" placeholder="We werken met passie en precisie..."></textarea>
+            </div>
+            <div class="divider">Kenmerken (drie punten)</div>
+            <div class="field-row">
+              <div class="field"><label>Kenmerk 1 — Titel</label><input type="text" data-key="aboutF1Title" placeholder="Zonder Afspraak" /></div>
+              <div class="field"><label>Kenmerk 1 — Tekst</label><input type="text" data-key="aboutF1Desc" placeholder="Loop gewoon binnen..." /></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label>Kenmerk 2 — Titel</label><input type="text" data-key="aboutF2Title" placeholder="Vakkundig Team" /></div>
+              <div class="field"><label>Kenmerk 2 — Tekst</label><input type="text" data-key="aboutF2Desc" placeholder="Onze kappers zijn getraind..." /></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label>Kenmerk 3 — Titel</label><input type="text" data-key="aboutF3Title" placeholder="6 Dagen Per Week" /></div>
+              <div class="field"><label>Kenmerk 3 — Tekst</label><input type="text" data-key="aboutF3Desc" placeholder="Di t/m za van 09:00–18:30..." /></div>
+            </div>
+          </div>
+          <button class="btn-save" data-panel="about">Opslaan ✓</button>
+        </section>
+
+        <!-- ── TAB: PASSWORD ─────────────────────── -->
+        <section class="tab-panel" id="tab-password">
+          <div class="panel-header">
+            <h2>Wachtwoord wijzigen</h2>
+            <p>Verander het inlogwachtwoord voor het beheerpaneel.</p>
+          </div>
+          <div class="fields" style="max-width:420px">
+            <div class="field">
+              <label>Huidig wachtwoord</label>
+              <input type="password" id="pw-current" placeholder="••••••••" />
+            </div>
+            <div class="field">
+              <label>Nieuw wachtwoord</label>
+              <input type="password" id="pw-new" placeholder="••••••••" />
+            </div>
+            <div class="field">
+              <label>Herhaal nieuw wachtwoord</label>
+              <input type="password" id="pw-confirm" placeholder="••••••••" />
+            </div>
+            <div id="pw-msg" class="error-msg" style="display:none"></div>
+          </div>
+          <button class="btn-save" id="pw-save-btn">Wachtwoord opslaan ✓</button>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ── TOAST ─────────────────────────────────────── -->
+  <div id="admin-toast"></div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

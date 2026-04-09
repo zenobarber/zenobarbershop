@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Over Ons — Kapsalon Zeno</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="content-loader.js"></script>
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-logo"><span>✦</span> Kapsalon Zeno</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" data-ed="site-logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Kapsalon Zeno</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#services">Diensten</a></li>
+        <li><a href="about.html" class="nav-active">Over Ons</a></li>
+        <li><a href="index.html#gallery">Galerij</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="index.html#booking" class="nav-cta">Afspraak Maken</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#services">Diensten</a>
+      <a href="about.html">Over Ons</a>
+      <a href="index.html#gallery">Galerij</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#booking" class="mobile-cta">Afspraak Maken</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="page-hero-content reveal">
+      <span class="section-tag">Ons Verhaal</span>
+      <h1 class="page-hero-title">Over <em>Kapsalon Zeno</em></h1>
+      <p>Meer dan een knipbeurt — het is een ritueel.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT CONTENT -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-visual reveal">
+        <div class="about-img-wrap">
+          <div class="about-img-bg"></div>
+          <div class="about-img-card" data-ed="about-photo">
+            <div class="about-img-scissors">✂</div>
+            <div class="about-badge-float">
+              <span class="badge-num">Z</span>
+              <span class="badge-text">Kapsalon<br>Zeno</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-quote">
+          <blockquote>"Een goede knipbeurt is het beste wat een man kan dragen."</blockquote>
+          <cite>— Zeno, Oprichter</cite>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <span class="section-tag">Wie Wij Zijn</span>
+        <h2 class="section-title">Meer Dan Een <em>Knipbeurt.</em><br>Het Is een Ritueel.</h2>
+        <p data-ed="about-p1">Kapsalon Zeno staat voor kwaliteit, vakmanschap en een warme sfeer. Wij geloven dat elke man verdient om er op zijn best uit te zien — of je nu een afspraak hebt of gewoon binnenloopt.</p>
+        <p data-ed="about-p2">We werken met passie en precisie, en combineren klassieke technieken met moderne stijlen. Bij Kapsalon Zeno ben je geen klant — je bent familie.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="af-icon">✦</div>
+            <div>
+              <h4 data-ed="about-f1-title">Zonder Afspraak</h4>
+              <p data-ed="about-f1-desc">Loop gewoon binnen — we werken ook zonder afspraak, altijd welkom.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="af-icon">✦</div>
+            <div>
+              <h4 data-ed="about-f2-title">Vakkundig Team</h4>
+              <p data-ed="about-f2-desc">Onze kappers zijn getraind in zowel klassieke als moderne technieken.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="af-icon">✦</div>
+            <div>
+              <h4 data-ed="about-f3-title">6 Dagen Per Week</h4>
+              <p data-ed="about-f3-desc">Di t/m za van 09:00–18:30, zondag van 11:00–17:00. Maandag gesloten.</p>
+            </div>
+          </div>
+        </div>
+        <a href="index.html#booking" class="btn btn-gold">Maak een Afspraak →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team-about" style="padding: 80px 0 120px; background: var(--bg2);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">De Kapper</span>
+        <h2 class="section-title">Maak Kennis Met <em>Zeno</em></h2>
+        <p class="section-sub">Vakmanschap met passie. Elke knipbeurt een meesterwerk.</p>
+      </div>
+      <div style="display:flex; justify-content:center;">
+        <div class="barber-card reveal" style="max-width:400px; width:100%;">
+          <div class="barber-img" data-ed="barber-photo">
+            <div class="barber-avatar" style="--hue:35">Z</div>
+            <div class="barber-socials">
+              <a href="https://www.instagram.com/kapsalonzeno" target="_blank" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="barber-info">
+            <h3>Zeno</h3>
+            <span class="barber-title">Oprichter & Master Kapper</span>
+            <p>De man achter Kapsalon Zeno. Gespecialiseerd in fades, contouren en baardverzorging met een oog voor detail.</p>
+            <div class="barber-tags">
+              <span>Knippen</span><span>Fades</span><span>Baard</span><span>Fade</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" data-ed="site-logo">
+          <span class="logo-icon">✦</span>
+          <span class="logo-text">Kapsalon Zeno</span>
+        </a>
+        <p>Elke knipbeurt een meesterwerk.<br>Schiffelerstraat 9 · Brunssum</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/kapsalonzeno" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/kapsalonzeno" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/31640667558" target="_blank" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Diensten</h4>
+        <ul>
+          <li><a href="index.html#services">Knippen & Stylen</a></li>
+          <li><a href="index.html#services">Knippen met Baard</a></li>
+          <li><a href="index.html#services">Kinderen Knippen</a></li>
+          <li><a href="index.html#services">Fade</a></li>
+          <li><a href="index.html#services">Gezichtsbehandeling</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Snelle Links</h4>
+        <ul>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="index.html#gallery">Galerij</a></li>
+          <li><a href="index.html#booking">Afspraak Maken</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Blijf Op De Hoogte</h4>
+        <p>Ontvang tips en exclusieve aanbiedingen direct in je inbox.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="jouw@email.com" required />
+          <button type="submit">→</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Kapsalon Zeno. Alle rechten voorbehouden.</p>
+      <p>Gemaakt met ✦ voor mannen die stijl waarderen.</p>
+      <a href="admin.html" class="footer-admin-login" title="Eigenaar login">🔒 Beheer</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
